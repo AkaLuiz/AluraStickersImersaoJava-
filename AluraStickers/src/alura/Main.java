@@ -27,6 +27,12 @@ public class Main {
 		
 		 // exibir e manipular os dados 
 		 for (Map<String,String> filme : listaDeFilmes) {
+			 	float estrelas = Float.parseFloat(filme.get("imDbRating"));
+			 	int numEstrela = (int)estrelas;
+			 	for(int i = 0; i < numEstrela; i++) {
+			 		System.out.print("★");
+			 	}
+			 	System.out.println("");
 	            System.out.println(filme.get("title"));
 	            System.out.println(filme.get("image"));
 	            System.out.println(filme.get("imDbRating"));
